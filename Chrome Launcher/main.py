@@ -11,9 +11,9 @@ class AuthApp:
 
     def __init__(self, root):
         self.root = root
-        self.root.title("Authentication System")
-        self.root.geometry("400x300")
-        root.iconbitmap('icon.ico')
+        self.root.title("Authentication System") # set any name you want
+        self.root.geometry("400x300") # set any size you want
+        root.iconbitmap('icon.ico') # set your actual icon, this is what I actually wrote for my April Fools
         
         # Create main frame
         self.main_frame = tk.Frame(self.root)
