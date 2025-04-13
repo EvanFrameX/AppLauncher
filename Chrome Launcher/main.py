@@ -6,8 +6,7 @@ import sys
 class AuthApp:
     # Class-level variable for preset valid users and their passwords
     valid_users = {
-        "mainframe": "acess",  # Preset account
-        "g": "00595",
+        "username": "password" # these are the lines you should change for the preset account
     }
 
     def __init__(self, root):
@@ -112,7 +111,8 @@ class AuthApp:
         
         # Check if the username and password are in the valid users list or not
         if username in self.valid_users and self.valid_users[username] == password:
-            wb.Popen(["start", "chrome", "--new-tab"], shell=True); sys.exit()
+            wb.Popen(["start", "chrome", "--new-tab"], shell=True) # this example runs chrome, but you can choose whatever app or file you wanna open
+            sys.exit()
             messagebox.showinfo("Success", "Login successful!")
             self.on_login_success()
         else:
